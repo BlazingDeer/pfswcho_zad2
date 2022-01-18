@@ -30,6 +30,6 @@ jobs:
         with:
           push: true
           platforms: linux/amd64, linux/arm64/v8, linux/386
-          tags: pfswcho_zad2/app:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/pfswcho_zad2:latest
           cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/pfswcho_zad2:buildcache
           cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/pfswcho_zad2:buildcache,mode=max
